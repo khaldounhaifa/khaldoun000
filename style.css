@@ -1,0 +1,52 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #9e440c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background-color: #9e440c;
+        }
+        .hidden {
+            display: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            padding: 8px;
+            width: 100%;
+        }
+        .form-group input[type="date"] {
+            padding: 8px;
+        }
+        .details-row {
+            background-color: #f9f9f9;
+        }

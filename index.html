@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>جدول الكتب مع تفاصيل إضافية</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>جدول الكتب</h1>
+
+        <!-- جدول الكتب -->
+        <table>
+            <thead>
+                <tr>
+                    <th>رمز الكتاب</th>
+                    <th>العنوان</th>
+                    <th>السعر</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>الإختيار</th>
+                </tr>
+            </thead>
+            <tbody id="book-table">
+                <!-- يتم إضافة الكتب هنا بواسطة جافا سكربت -->
+            </tbody>
+        </table>
+
+        <!-- زر بثلاث نقاط لعرض المزيد من الكتب -->
+        <button class="btn" onclick="loadMoreBooks()">عرض المزيد من الكتب</button>
+
+        <!-- زر متابعة لإظهار النموذج -->
+        <button class="btn" onclick="showForm()">متابعة</button>
+
+        <!-- نموذج إدخال البيانات -->
+        <div id="form-container" class="hidden">
+            <h2>نموذج بيانات مقدم الطلب</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="full-name">الاسم الكامل:</label>
+                    <input type="text" id="full-name" name="full-name" pattern="[\u0600-\u06FF\s]+"
+                        placeholder="أدخل الاسم الكامل" required>
+                </div>
+                <div class="form-group">
+                    <label for="national-id">الرقم الوطني (11 خانة):</label>
+                    <input type="text" id="national-id" name="national-id" maxlength="11" pattern="\d{11}"
+                        placeholder="أدخل الرقم الوطني" required>
+                </div>
+                <div class="form-group">
+                    <label for="province">المحافظة:</label>
+                    <select id="province" name="province" required>
+                        <option value="">اختر المحافظة</option>
+                        <option value="دمشق">دمشق</option>
+                        <option value="حلب">حلب</option>
+                        <option value="حمص">حمص</option>
+                        <option value="اللاذقية">اللاذقية</option>
+                        <option value="دير الزور">دير الزور</option>
+                        <option value="الرقة">الرقة</option>
+                        <option value="الرقة">درعا</option>
+                        <option value="الرقة">الحسكة</option>
+                        <option value="الرقة">السويداء</option>
+                        <!-- يمكن إضافة المزيد من المحافظات هنا -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">تاريخ الميلاد (dd-mm-yyyy):</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">رقم الموبايل:</label>
+                    <input type="text" id="mobile" name="mobile" pattern="^(093|094|095|096|097|098|099)[0-9]{7}$"
+                        placeholder="أدخل رقم الموبايل" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" placeholder="أدخل البريد الإلكتروني" required>
+                </div>
+                <button type="submit" class="btn">إرسال البيانات</button>
+            </form>
+        </div>
+        <script src="myfunction.js"></script> 
+    </body>
+</html>
